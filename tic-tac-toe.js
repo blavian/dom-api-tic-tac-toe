@@ -1,5 +1,25 @@
+
+function checkGameStatus(){
+//Check Rows
+for(let i = 0; i < 9; i+=3){
+    if(squareValues[i]!== ''
+    && squareValues[i] === squareValues[i + 1]
+    && squareValues[i] === squareValues[i + 2]){
+        gameStatus = squareValues[i];
+        
+        break;
+    } 
+
+    }
+}
+
+
+
+
+
 let currentPlayerSymbol = "x";
 let squareValues = ["", "", "", "", "", "", "", "", ""];
+let gameStatus = ''
 
 window.addEventListener("DOMContentLoaded", (event) => {
   document
@@ -24,5 +44,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
       } else {
         currentPlayerSymbol = "x";
       }
+      checkGameStatus()
     });
 });
