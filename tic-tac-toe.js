@@ -35,6 +35,15 @@ for(let i = 0; i < 9; i+=3){
       .innerHTML = `Winner:${gameStatus.toUpperCase()}`
   }
 
+  //Check for a tie
+  let boardIsFilled = true;
+  for(let i = 0;i < 9; i++){
+    if(squareValues[i] === ''){
+        boardIsFilled = false;
+    }
+  }
+  if(boardIsFilled) gameStatus = 'Nobody'
+
     
 }
 }
