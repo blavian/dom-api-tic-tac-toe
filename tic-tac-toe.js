@@ -33,6 +33,7 @@ for(let i = 0; i < 9; i+=3){
       document
       .getElementById('game-status')
       .innerHTML = `Winner:${gameStatus.toUpperCase()}`
+      document.getElementById('new-game').disabled = false;
   }
 
   //Check for a tie
@@ -81,4 +82,20 @@ window.addEventListener("DOMContentLoaded", (event) => {
       }
       checkGameStatus()
     });
+    document.getElementById("new-game")
+.addEventListener("click", (e) => {
+    gameStatus = "";
+    document
+    .getElementById('game-status')
+    .innerHTML = ''
+    for(let i = 0; i < 9; i+=1){
+        document.getElementById(`square-${i}`)
+        .innerHTML = ''
+    }
+    currentPlayerSymbol = "x";
+    document.getElementById('new-game').disabled = true;
+    squareValues = ["", "", "", "", "", "", "", "", ""];
+    
+
+})
 });
