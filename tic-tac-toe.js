@@ -1,0 +1,1 @@
+let currentPlayerSymbol = x;
