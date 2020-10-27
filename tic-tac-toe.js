@@ -16,10 +16,26 @@ for(let i = 0; i < 9; i+=3){
     && squareValues[i] === squareValues[i + 3]
     && squareValues[i] === squareValues[i + 6]){
         gameStatus = squareValues[i];
-        break;
-
-
+    
     }
+    //check diagonals
+    if(squareValues[0] !==''
+    && squareValues[0] === squareValues[4]
+    && squareValues[0] === squareValues[8]){
+    gameStatus = squareValues[0]
+    }
+     if(squareValues[2] !==''
+    && squareValues[2] === squareValues[4]
+    && squareValues[2] === squareValues[6]){
+    gameStatus = squareValues[2]
+    }
+  if(gameStatus !==''){
+      document
+      .getElementById('game-status')
+      .innerHTML = `Winner:${gameStatus.toUpperCase()}`
+  }
+
+    
 }
 }
 
