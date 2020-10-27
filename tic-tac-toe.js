@@ -8,9 +8,19 @@ for(let i = 0; i < 9; i+=3){
         gameStatus = squareValues[i];
         
         break;
-    } 
+    }
+} 
+    // check columns
+    for(let i = 0; i < 3; i+=1){
+    if(squareValues[i]!== ''
+    && squareValues[i] === squareValues[i + 3]
+    && squareValues[i] === squareValues[i + 6]){
+        gameStatus = squareValues[i];
+        break;
+
 
     }
+}
 }
 
 
